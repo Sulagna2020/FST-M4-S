@@ -1,0 +1,10 @@
+root@5732a192c956:/# vim txtFile.txt
+root@5732a192c956:/# vim csvFile.csv 
+root@5732a192c956:/# hdfs dfs -mkdir /user/sulagna/textData
+
+root@5732a192c956:/# hdfs dfs -put ./csvFile.csv /user/sulagna/textData
+root@5732a192c956:/# hdfs dfs -put ./txtFile.txt /user/sulagna/textData
+
+root@5732a192c956:/# hdfs dfs -stat "type:%F permissions:%a %u:%g size:%b name:%n" /user/sulagna/textData/csvFile.csv
+root@5732a192c956:/# hdfs dfs -stat "type:%F permissions:%a %u:%g size:%b name:%n" /user/sulagna/textData/txtFile.txt
+
